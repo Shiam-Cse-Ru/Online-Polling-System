@@ -156,7 +156,7 @@ class Poll{
       return false;
     }
   }
-    public static function InserUsertRoll($user_roll)
+    public static function InsertUserRoll($user_roll)
   {
 
     $db = mysqli_connect("localhost", "root", "", "poll_system");

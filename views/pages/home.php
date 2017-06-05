@@ -20,7 +20,7 @@ if(isset($_POST['voteSubmit'])){
 
       else{
         $voteSubmit = $poll->vote($voteData);
-        $InsertRoll=Poll::InserUsertRoll($user_roll);
+        $InsertRoll=Poll::InsertUserRoll($user_roll);
         if ($voteSubmit) {
          $success = 'Your vote has been submitted successfully.';
 
