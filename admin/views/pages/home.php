@@ -10,7 +10,7 @@
                                 $password = trim($_POST['password']);
                              
 
-                                $user = Poll::checkForUser($user_name, $password);
+                                $user = Model::checkForUser($user_name, $password);
 
                                 if ($user == null) {
                                     $message = "Wrong \"username\" or \"password\". Please try again.";
@@ -20,7 +20,7 @@
                                     
                                     $_SESSION['user_name'] = $user_name;
                                     $successmessage = "Logging-in successful.";
-                                     echo"<script>window.open('?controller=pages&action=results','_self')</script>";
+                                     echo"<script>window.open('?controller=pages&action=admin','_self')</script>";
                                 }
                             }
                             

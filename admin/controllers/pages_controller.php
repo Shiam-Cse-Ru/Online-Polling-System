@@ -1,17 +1,20 @@
 <?php
   class PagesController {
     public function home() {
-      $first_name = 'Abdullah Al';
-      $last_name  = 'Shiam';
+      
       require_once('views/pages/home.php');
     }
 
-     public function results() {
+     public function admin() {
       
-      require_once('views/pages/results.php');
+      require_once('views/pages/admin.php');
     }
 
-    
+       public function logout() {
+      
+      require_once('views/pages/logout.php');
+    }
+
     public function error() {
       require_once('views/pages/error.php');
     }

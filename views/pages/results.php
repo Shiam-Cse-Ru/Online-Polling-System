@@ -33,12 +33,11 @@ a { text-decoration: none; color: #EC5C93; }
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 9px 0px;
+  padding: 9px 12px;
   width: 18%;
   height: 16px;
   margin-top: -15px;
 }
-
 .bar-container {
   float: right;
   -webkit-border-radius: 10px;
@@ -125,7 +124,7 @@ a { text-decoration: none; color: #EC5C93; }
     <div class="bar-main-container <?php echo $barColor; ?>">
         <div class="txt"><?php echo $opt; ?></div>
         <div class="wrap">
-          <div class="bar-percentage"><?php echo $votePercent; ?></div>
+          <div class="bar-percentage" style="padding-bottom: 20px"><?php echo $votePercent; ?></div>
           <div class="bar-container">
             <div class="bar" style="width: <?php echo $votePercent; ?>;"></div>
           </div>
