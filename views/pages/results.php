@@ -96,7 +96,7 @@ a { text-decoration: none; color: #EC5C93; }
       $pollResult = $poll->getResult($_GET['pollID']);
     ?>
 <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
-<div class="panel panel-success">
+<div class="panel panel-info">
        <div class="panel-heading">
          <div class="panel-title">  
          <h3> <h3><?php echo $pollResult['poll']; ?></h3></h3>

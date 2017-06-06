@@ -58,7 +58,7 @@ else{
       <?php echo !empty($success)?'<div class="flash alert-success">
         <p class="panel-body">'.$success.'</p>
       </div>':''; ?>
-  <div class="panel panel-default">
+  <div class="panel panel-info">
                     <div class="panel-heading">
          <div class="panel-title text-center">  
          <h3><?php echo $pollData['poll']['subject']; ?></h3>

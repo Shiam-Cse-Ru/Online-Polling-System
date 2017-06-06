@@ -62,21 +62,24 @@ class Model{
   }
 
   public static function SetPollOptions($polldata=array())
-  {
-     $i=2;
+  {  
+     $i=0;
+     $id=1;
      $db = mysqli_connect("localhost", "root", "", "poll_system");
      $sql = "SELECT * FROM `poll_options`";
      $result = mysqli_query($db, $sql);
-     $sss=mysqli_num_rows($result);
+  
 
-    $data=$polldata[0];
-   
-     $insert = "INSERT INTO `poll_options` (`nam`) VALUES ('{$data}') WHERE status='$i' ";
-     
+     while ($row=mysqli_fetch_row($result)) {
+        $insert="update poll_options set name='$polldata[$i]' where id='$id'";
+        $id++;
+        $i++; 
+        $result1 = mysqli_query($db, $insert);
+     }
 
   
-   $result1 = mysqli_query($db, $insert);
-     mysqli_close($db);
+  
+    
   if($result1) {
       return true;
     } else {
