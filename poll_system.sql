@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2017 at 10:08 PM
+-- Generation Time: Jun 06, 2017 at 09:28 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `poll_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `action` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `user_name`, `password`, `action`) VALUES
+(1, 'shila', 'shiam_cse', '1234', 1);
 
 -- --------------------------------------------------------
 
@@ -61,10 +82,10 @@ CREATE TABLE `poll_options` (
 --
 
 INSERT INTO `poll_options` (`id`, `poll_id`, `name`, `created`, `modified`, `status`) VALUES
-(1, 1, 'Kuthibari', '2016-11-07 11:29:31', '2016-11-07 11:29:31', '1'),
-(2, 1, 'Sopnopur', '2016-11-07 11:29:31', '2016-11-07 11:29:31', '1'),
-(3, 1, 'Natore', '2016-11-07 11:29:31', '2016-11-07 11:29:31', '1'),
-(4, 1, 'Paharpur', '2016-11-08 08:20:25', '2016-11-08 08:20:25', '1');
+(1, 1, 'Kuthibari', '2017-11-05 11:29:31', '2017-11-07 11:29:31', '1'),
+(2, 1, 'Rangamati', '2017-11-05 11:29:31', '2017-11-07 11:29:31', '1'),
+(3, 1, 'Sylhet', '2017-11-05 11:29:31', '2017-11-07 11:29:31', '1'),
+(4, 1, 'Sundorban', '2017-11-08 08:20:25', '2017-11-08 08:20:25', '1');
 
 -- --------------------------------------------------------
 
@@ -136,6 +157,12 @@ INSERT INTO `vote_roll` (`id`, `vote_roll`) VALUES
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `polls`
 --
 ALTER TABLE `polls`
@@ -173,6 +200,11 @@ ALTER TABLE `vote_roll`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `polls`
 --
 ALTER TABLE `polls`
@@ -181,12 +213,12 @@ ALTER TABLE `polls`
 -- AUTO_INCREMENT for table `poll_options`
 --
 ALTER TABLE `poll_options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `poll_votes`
 --
 ALTER TABLE `poll_votes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `user_roll`
 --
