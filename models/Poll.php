@@ -142,6 +142,21 @@ class Poll{
       return false;
     }
   }
+
+      public static function CheckPublishStatus()
+  {
+    $action=1;
+    $db = mysqli_connect("localhost", "root", "", "poll_system");
+    $sql = "SELECT action FROM `admin` WHERE `action`='{$action}'";
+    $result = mysqli_query($db, $sql);
+    if(mysqli_num_rows($result) == 1) {
+      mysqli_close($db);
+      return true;
+    } else {
+      mysqli_close($db);
+      return false;
+    }
+  }
      public static function CheckExistingVote($user_roll)
   {
     

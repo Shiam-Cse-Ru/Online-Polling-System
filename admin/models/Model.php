@@ -61,6 +61,21 @@ class Model{
     }
   }
 
+   public static function PublishResult()
+  {
+    $i=1;
+    $id=1;
+    $db = mysqli_connect("localhost", "root", "", "poll_system");
+    $insert="update admin set action='$i' where id='$id'";
+    $result = mysqli_query($db, $insert);
+    mysqli_close($db);
+    if($result) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public static function SetPollOptions($polldata=array())
   {  
      $i=0;

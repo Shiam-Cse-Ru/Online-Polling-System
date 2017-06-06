@@ -1,6 +1,12 @@
 <?php session_start(); ?>
 <?php 
-
+if (isset($_POST['publish'])) {
+  $publishresut=Model::PublishResult();
+  if ($publishresut) {
+    $success="Results has Published";
+    $_SESSION['success']=$success;
+  }
+}
 if (!isset($_SESSION['user_name'])) {
    echo"<script>window.open('?controller=pages&action=home','_self')</script>";
 }
@@ -100,6 +106,9 @@ if (isset($_POST['option_submit'])) {
 
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
+<?php echo !empty($_SESSION['success'])?'<div class="flash alert-success">
+        <p class="panel-body">'.$_SESSION['success'].'</p>
+      </div>':''; unset($_SESSION['success']);?>
 <div class="panel panel-info">
   <div class="panel-body">
 <ul class="nav nav-tabs">
@@ -129,26 +138,26 @@ if (isset($_POST['option_submit'])) {
                         
 
                             <div class="form-group">
-                                <label class=" control-label">Option 1</label>
+                                <label class=" control-label"></label>
                                 <input type="text" class="form-control" name="poll1" value="" required="" placeholder="Option 1">
 
                                 
                             </div>
 
                             <div class="form-group">
-                                <label class=" control-label">Option 2</label>
+                                <label class=" control-label"></label>
                                 <input type="text" class="form-control" name="poll2" value="" required="" placeholder="Option 2">
 
                                 
                             </div>
                             <div class="form-group">
-                                <label class=" control-label">Option 3</label>
+                                <label class=" control-label"></label>
                                 <input type="text" class="form-control" name="poll3" value="" required="" placeholder="Option 3">
 
                                 
                             </div>
                             <div class="form-group">
-                                <label class=" control-label">Option 4</label>
+                                <label class=" control-label"></label>
                                 <input type="text" class="form-control" name="poll4" value="" required="" placeholder="Option 4">
 
                                 
@@ -203,8 +212,12 @@ if (isset($_POST['option_submit'])) {
         </div>
     </div>
     <?php $i++; } } ?>
-    <p class="text-center"><a href="index.php" class="btn btn-success">Publish</a></p>
-
+    <br>
+ <form method="post" action="">
+      <div class="text-center">
+   <input type="submit" name="publish" class="btn btn-primary" value="Publish">
+    </div>
+    </form>
 </div>
 
 
@@ -215,3 +228,4 @@ if (isset($_POST['option_submit'])) {
 </div>
    </div>
    </div>
+

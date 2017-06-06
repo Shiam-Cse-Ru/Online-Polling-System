@@ -104,7 +104,11 @@ a { text-decoration: none; color: #EC5C93; }
                         
                     </div> 
      <div style="padding-top:30px" class="panel-body">
-  
+     <?php $check_action_status=$poll->CheckPublishStatus();
+
+    if($check_action_status){
+     ?>
+
     <p><b>Total Votes:</b> <?php echo $pollResult['total_votes']; ?></p>
     <?php
     if(!empty($pollResult['options'])){ $i=0;
@@ -130,7 +134,15 @@ a { text-decoration: none; color: #EC5C93; }
           </div>
         </div>
     </div>
-    <?php $i++; } } ?>
+    <?php $i++; } }?>
+    <?php }
+    else
+    {
+
+      echo "<h2>The result will be published very soon<h2>";
+    }
+
+     ?>
 
     <br>
     <a href="index.php" class="btn btn-primary">Back To Poll</a>
