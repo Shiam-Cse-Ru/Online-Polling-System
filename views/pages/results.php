@@ -90,9 +90,10 @@ a { text-decoration: none; color: #EC5C93; }
 </style>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div id="container">
   <?php
-      //Get poll result data
+      
       $pollResult = $poll->getResult($_GET['pollID']);
     ?>
 <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 

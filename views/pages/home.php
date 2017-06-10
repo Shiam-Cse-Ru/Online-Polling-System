@@ -46,18 +46,25 @@ else{
 
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div class="container">
+
     <?php
         //Get poll and options data
         $pollData = $poll->getPolls();
     ?>
 <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
-  <?php echo !empty($statusMsg)?'<div class="flash alert-danger">
+  <?php echo !empty($statusMsg)?'<div class="alert alert-danger">
+     <a href="" class="close" data-dismiss="alert">×</a>
+
         <p class="panel-body">'.$statusMsg.'</p>
       </div>':''; ?>
-      <?php echo !empty($success)?'<div class="flash alert-success">
+      <?php echo !empty($success)?'<div class="alert alert-success">
+   <a href="" class="close" data-dismiss="alert">×</a>
+
         <p class="panel-body">'.$success.'</p>
       </div>':''; ?>
+
   <div class="panel panel-info">
                     <div class="panel-heading">
          <div class="panel-title text-center">  
@@ -84,8 +91,9 @@ else{
         </form>
     </div>
     </div>
+  
     </div>
     </div>
-</div>
+
 </body>
 </html>

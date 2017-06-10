@@ -34,11 +34,12 @@
 
 
 
-
+<?php include 'header.php'; ?>
 <div class="container" style="padding-top: 30px">
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+ <div class="well">
             <div class="panel panel-info">
                 <div class="panel-heading">Administrator Login</div>
                 <div class="panel-body">
@@ -78,6 +79,7 @@
                             </div>
                         </form>
                 </div>
+            </div>
             </div>
         </div>
     </div>

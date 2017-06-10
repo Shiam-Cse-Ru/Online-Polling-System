@@ -91,6 +91,7 @@ a { text-decoration: none; color: #EC5C93; }
 </style>
 </head>
 <body>
+<?php include 'header.php'; ?>
 <div id="container">
   <?php
       //Get poll result data
