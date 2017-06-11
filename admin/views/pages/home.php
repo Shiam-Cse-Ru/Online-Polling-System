@@ -39,7 +39,7 @@
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
- <div class="well">
+ <div class="panel panel-body panel-default">
             <div class="panel panel-info">
                 <div class="panel-heading">Administrator Login</div>
                 <div class="panel-body">

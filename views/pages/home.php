@@ -65,6 +65,7 @@ else{
         <p class="panel-body">'.$success.'</p>
       </div>':''; ?>
 
+ <div class="panel panel-body panel-default">
   <div class="panel panel-info">
                     <div class="panel-heading">
          <div class="panel-title text-center">  
@@ -91,7 +92,7 @@ else{
         </form>
     </div>
     </div>
-  
+  </div>
     </div>
     </div>
 

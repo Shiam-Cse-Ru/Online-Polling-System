@@ -97,6 +97,7 @@ a { text-decoration: none; color: #EC5C93; }
       $pollResult = $poll->getResult($_GET['pollID']);
     ?>
 <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
+ <div class="panel panel-body panel-default">
 <div class="panel panel-info">
        <div class="panel-heading">
          <div class="panel-title">  
@@ -148,6 +149,7 @@ a { text-decoration: none; color: #EC5C93; }
     <br>
     <a href="index.php" class="btn btn-primary">Back To Poll</a>
  </div>
+    </div>
     </div>
     </div>
 </div>
