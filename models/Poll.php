@@ -33,7 +33,7 @@ class Poll{
      * @param string SQL
      * @param string count, single, all
      */
-    private function getQuery($sql,$returnType = ''){
+   private function getQuery($sql,$returnType = ''){
         $data = '';
         $result = $this->db->query($sql);
         if($result){
@@ -60,7 +60,7 @@ class Poll{
      * Returns single or multiple poll data with respective options
      * @param string single, all
      */
-    public function getPolls($pollType = 'single'){
+   public function getPolls($pollType = 'single'){
         $pollData = array();
         $sql = "SELECT * FROM ".$this->pollTbl." WHERE status = '1' ORDER BY created DESC";
         $pollResult = $this->getQuery($sql, $pollType);

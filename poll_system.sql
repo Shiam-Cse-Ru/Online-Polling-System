@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2017 at 09:28 PM
+-- Generation Time: Jul 08, 2017 at 10:09 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -105,9 +105,9 @@ CREATE TABLE `poll_votes` (
 --
 
 INSERT INTO `poll_votes` (`id`, `poll_id`, `poll_option_id`, `vote_count`) VALUES
-(1, 1, 2, 15),
-(2, 1, 1, 24),
-(3, 1, 3, 13),
+(1, 1, 2, 3),
+(2, 1, 1, 2),
+(3, 1, 3, 2),
 (4, 1, 4, 4);
 
 -- --------------------------------------------------------
@@ -127,9 +127,23 @@ CREATE TABLE `user_roll` (
 
 INSERT INTO `user_roll` (`id`, `roll`) VALUES
 (1, '13065401'),
-(2, '13065419'),
-(3, '13065436'),
-(4, '13065435');
+(2, '13105403'),
+(3, '13045404'),
+(4, '13045405'),
+(5, '13015407'),
+(6, '13115408'),
+(7, '13045410'),
+(8, '13015411'),
+(9, '13115412'),
+(10, '13075415'),
+(11, '13055417'),
+(12, '13065419'),
+(13, '13055425'),
+(14, '13075428'),
+(15, '13215430'),
+(16, '13115432'),
+(17, '13205433'),
+(18, '13065434');
 
 -- --------------------------------------------------------
 
@@ -147,10 +161,17 @@ CREATE TABLE `vote_roll` (
 --
 
 INSERT INTO `vote_roll` (`id`, `vote_roll`) VALUES
-(7, '13065401'),
-(8, '13065419'),
-(9, '13065436'),
-(10, '13065435');
+(19, '13065401'),
+(20, '13105403'),
+(21, '13045404'),
+(22, '13045405'),
+(23, '13015407'),
+(24, '13115408'),
+(25, '13045410'),
+(26, '13015411'),
+(27, '13115412'),
+(28, '13075415'),
+(29, '13055417');
 
 --
 -- Indexes for dumped tables
@@ -223,12 +244,12 @@ ALTER TABLE `poll_votes`
 -- AUTO_INCREMENT for table `user_roll`
 --
 ALTER TABLE `user_roll`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `vote_roll`
 --
 ALTER TABLE `vote_roll`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- Constraints for dumped tables
 --
