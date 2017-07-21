@@ -113,7 +113,7 @@ if (isset($_POST['option_submit'])) {
 </div>
 <div class="tab-pane " id="tab2">
 
-  <p><img src="img/chase.jpg" class="pull-left img-responsive"> Dr. Chase spends much of her free time helping the local bunny rescue organization find homes for bunnies, such as Kibbles. This cuddly Dalmatian bunny is part of the large Chase household, which also includes two dogs, three cats, and a turtle.</p>
+  <p><h3>Set Duration for Poll</h3></p>
 
 </div>
 <div class="tab-pane " id="tab3">
