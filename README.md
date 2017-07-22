@@ -1,4 +1,5 @@
 # Online-Polling-System
+Academic Project
 <pre>A polling system having following criteria.</pre>
 •	User will enter his valid roll no. and select one of the voting options to cast his/her vote.<br>
 •	Only one vote can be cast  against each roll<br>
